@@ -1,0 +1,12 @@
+# ninja log v5
+2	464	1579502284	CMakeFiles/HeartBeat.dir/src/pBox.cpp.o	fc60f247d00f5b5b
+1	994	1579502285	CMakeFiles/HeartBeat.dir/src/FaceDetect.cpp.o	fe916cb0a4c13fd3
+1	1297	1579502285	CMakeFiles/HeartBeat.dir/src/mtcnn.cpp.o	6f5a7af97b5082e7
+0	1367	1579502285	CMakeFiles/HeartBeat.dir/src/Baseline.cpp.o	547ac35a8d05af71
+2	1382	1579502285	CMakeFiles/HeartBeat.dir/src/network.cpp.o	28e44a44e5a3d508
+2	1959	1579502286	CMakeFiles/HeartBeat.dir/src/opencv.cpp.o	5cd0dc6dab84daed
+1	2655	1579502287	CMakeFiles/HeartBeat.dir/src/js_utils.cpp.o	a97226e1a8872441
+1	3047	1579502287	CMakeFiles/HeartBeat.dir/src/Heartbeat.cpp.o	83f126e6512db18b
+1	4042	1579502288	CMakeFiles/HeartBeat.dir/src/RPPG.cpp.o	aae037420334b310
+4042	4251	1579502288	HeartBeat	108f8e76832237ab
+3	212	1579502302	HeartBeat	108f8e76832237ab
