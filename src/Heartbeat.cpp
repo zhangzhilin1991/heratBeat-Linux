@@ -345,10 +345,9 @@ int main(int argc, char * argv[]) {
         if (gui) {
             imshow(window_title.str(), frameRGB);
 			oVideoWriter << frameRGB;
-            if (waitKey(30) >= 0) break;
+           if (waitKey(30) >= 0) break;
         }
         
-
         i++;
     }
 	oVideoWriter.release();

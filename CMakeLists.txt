@@ -8,7 +8,7 @@ cmake_minimum_required(VERSION 3.4.1)
 set (CMAKE_CXX_STANDARD 14)
 
 find_package(PkgConfig REQUIRED)
-pkg_search_module(OPENCV REQUIRED opencv)
+pkg_search_module(OPENCV REQUIRED opencv4)
 pkg_search_module(OPENBLAS REQUIRED openblas)
 pkg_search_module(NUMCPP REQUIRED NumCpp)
 pkg_search_module(BOOST REQUIRED boost)

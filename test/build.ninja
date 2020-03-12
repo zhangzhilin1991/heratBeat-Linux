@@ -12,7 +12,7 @@
 
 # =============================================================================
 # Project: Project
-# Configuration: 
+# Configuration: Release
 # =============================================================================
 
 #############################################
@@ -34,7 +34,7 @@ include rules.ninja
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/nyiit/heatbeatproject/heartbeat-linux/build && /home/nyiit/Android/Sdk/cmake/3.10.2.4988404/bin/cmake -H/home/nyiit/heatbeatproject/heartbeat-linux -B/home/nyiit/heatbeatproject/heartbeat-linux/build
+  COMMAND = cd /home/nyiit/heatbeatproject/heartbeat-linux/test && /home/nyiit/Android/Sdk/cmake/3.10.2.4988404/bin/cmake -H/home/nyiit/heatbeatproject/heartbeat-linux -B/home/nyiit/heatbeatproject/heartbeat-linux/test
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -44,7 +44,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/nyiit/heatbeatproject/heartbeat-linux/build && /home/nyiit/Android/Sdk/cmake/3.10.2.4988404/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd /home/nyiit/heatbeatproject/heartbeat-linux/test && /home/nyiit/Android/Sdk/cmake/3.10.2.4988404/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 build edit_cache: phony CMakeFiles/edit_cache.util
@@ -58,72 +58,72 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 build cmake_object_order_depends_target_HeartBeat: phony
 build CMakeFiles/HeartBeat.dir/src/Baseline.cpp.o: CXX_COMPILER__HeartBeat ../src/Baseline.cpp || cmake_object_order_depends_target_HeartBeat
   DEP_FILE = CMakeFiles/HeartBeat.dir/src/Baseline.cpp.o.d
-  FLAGS = -std=gnu++14
-  INCLUDES = -I../include -I/home/nyiit/heatbeatproject/opencv/opencv-4.2.0/linux-build/install/include/opencv4/opencv -I/home/nyiit/heatbeatproject/opencv/opencv-4.2.0/linux-build/install/include/opencv4 -I/home/nyiit/heatbeatproject/openblas/OpenBLAS/mybuild/linux-build/install/include -I/home/nyiit/heatbeatproject/numcpp/NumCpp/install/lib -I/home/nyiit/heatbeatproject/numcpp/NumCpp/boost/boost_1_70_0/mybuild/linux-build/install/include
+  FLAGS = -O3 -DNDEBUG   -std=gnu++14
+  INCLUDES = -I../include -I/home/nyiit/heatbeatproject/opencv/opencv-3.4.7/linux-build/install/include/opencv -I/home/nyiit/heatbeatproject/opencv/opencv-3.4.7/linux-build/install/include -I/home/nyiit/heatbeatproject/openblas/OpenBLAS/mybuild/linux-build/install/include -I/home/nyiit/heatbeatproject/numcpp/NumCpp/install/lib -I/home/nyiit/heatbeatproject/numcpp/NumCpp/boost/boost_1_70_0/mybuild/linux-build/install/include
   OBJECT_DIR = CMakeFiles/HeartBeat.dir
   OBJECT_FILE_DIR = CMakeFiles/HeartBeat.dir/src
   TARGET_COMPILE_PDB = CMakeFiles/HeartBeat.dir/
   TARGET_PDB = HeartBeat.pdb
 build CMakeFiles/HeartBeat.dir/src/FaceDetect.cpp.o: CXX_COMPILER__HeartBeat ../src/FaceDetect.cpp || cmake_object_order_depends_target_HeartBeat
   DEP_FILE = CMakeFiles/HeartBeat.dir/src/FaceDetect.cpp.o.d
-  FLAGS = -std=gnu++14
-  INCLUDES = -I../include -I/home/nyiit/heatbeatproject/opencv/opencv-4.2.0/linux-build/install/include/opencv4/opencv -I/home/nyiit/heatbeatproject/opencv/opencv-4.2.0/linux-build/install/include/opencv4 -I/home/nyiit/heatbeatproject/openblas/OpenBLAS/mybuild/linux-build/install/include -I/home/nyiit/heatbeatproject/numcpp/NumCpp/install/lib -I/home/nyiit/heatbeatproject/numcpp/NumCpp/boost/boost_1_70_0/mybuild/linux-build/install/include
+  FLAGS = -O3 -DNDEBUG   -std=gnu++14
+  INCLUDES = -I../include -I/home/nyiit/heatbeatproject/opencv/opencv-3.4.7/linux-build/install/include/opencv -I/home/nyiit/heatbeatproject/opencv/opencv-3.4.7/linux-build/install/include -I/home/nyiit/heatbeatproject/openblas/OpenBLAS/mybuild/linux-build/install/include -I/home/nyiit/heatbeatproject/numcpp/NumCpp/install/lib -I/home/nyiit/heatbeatproject/numcpp/NumCpp/boost/boost_1_70_0/mybuild/linux-build/install/include
   OBJECT_DIR = CMakeFiles/HeartBeat.dir
   OBJECT_FILE_DIR = CMakeFiles/HeartBeat.dir/src
   TARGET_COMPILE_PDB = CMakeFiles/HeartBeat.dir/
   TARGET_PDB = HeartBeat.pdb
 build CMakeFiles/HeartBeat.dir/src/Heartbeat.cpp.o: CXX_COMPILER__HeartBeat ../src/Heartbeat.cpp || cmake_object_order_depends_target_HeartBeat
   DEP_FILE = CMakeFiles/HeartBeat.dir/src/Heartbeat.cpp.o.d
-  FLAGS = -std=gnu++14
-  INCLUDES = -I../include -I/home/nyiit/heatbeatproject/opencv/opencv-4.2.0/linux-build/install/include/opencv4/opencv -I/home/nyiit/heatbeatproject/opencv/opencv-4.2.0/linux-build/install/include/opencv4 -I/home/nyiit/heatbeatproject/openblas/OpenBLAS/mybuild/linux-build/install/include -I/home/nyiit/heatbeatproject/numcpp/NumCpp/install/lib -I/home/nyiit/heatbeatproject/numcpp/NumCpp/boost/boost_1_70_0/mybuild/linux-build/install/include
+  FLAGS = -O3 -DNDEBUG   -std=gnu++14
+  INCLUDES = -I../include -I/home/nyiit/heatbeatproject/opencv/opencv-3.4.7/linux-build/install/include/opencv -I/home/nyiit/heatbeatproject/opencv/opencv-3.4.7/linux-build/install/include -I/home/nyiit/heatbeatproject/openblas/OpenBLAS/mybuild/linux-build/install/include -I/home/nyiit/heatbeatproject/numcpp/NumCpp/install/lib -I/home/nyiit/heatbeatproject/numcpp/NumCpp/boost/boost_1_70_0/mybuild/linux-build/install/include
   OBJECT_DIR = CMakeFiles/HeartBeat.dir
   OBJECT_FILE_DIR = CMakeFiles/HeartBeat.dir/src
   TARGET_COMPILE_PDB = CMakeFiles/HeartBeat.dir/
   TARGET_PDB = HeartBeat.pdb
 build CMakeFiles/HeartBeat.dir/src/RPPG.cpp.o: CXX_COMPILER__HeartBeat ../src/RPPG.cpp || cmake_object_order_depends_target_HeartBeat
   DEP_FILE = CMakeFiles/HeartBeat.dir/src/RPPG.cpp.o.d
-  FLAGS = -std=gnu++14
-  INCLUDES = -I../include -I/home/nyiit/heatbeatproject/opencv/opencv-4.2.0/linux-build/install/include/opencv4/opencv -I/home/nyiit/heatbeatproject/opencv/opencv-4.2.0/linux-build/install/include/opencv4 -I/home/nyiit/heatbeatproject/openblas/OpenBLAS/mybuild/linux-build/install/include -I/home/nyiit/heatbeatproject/numcpp/NumCpp/install/lib -I/home/nyiit/heatbeatproject/numcpp/NumCpp/boost/boost_1_70_0/mybuild/linux-build/install/include
+  FLAGS = -O3 -DNDEBUG   -std=gnu++14
+  INCLUDES = -I../include -I/home/nyiit/heatbeatproject/opencv/opencv-3.4.7/linux-build/install/include/opencv -I/home/nyiit/heatbeatproject/opencv/opencv-3.4.7/linux-build/install/include -I/home/nyiit/heatbeatproject/openblas/OpenBLAS/mybuild/linux-build/install/include -I/home/nyiit/heatbeatproject/numcpp/NumCpp/install/lib -I/home/nyiit/heatbeatproject/numcpp/NumCpp/boost/boost_1_70_0/mybuild/linux-build/install/include
   OBJECT_DIR = CMakeFiles/HeartBeat.dir
   OBJECT_FILE_DIR = CMakeFiles/HeartBeat.dir/src
   TARGET_COMPILE_PDB = CMakeFiles/HeartBeat.dir/
   TARGET_PDB = HeartBeat.pdb
 build CMakeFiles/HeartBeat.dir/src/js_utils.cpp.o: CXX_COMPILER__HeartBeat ../src/js_utils.cpp || cmake_object_order_depends_target_HeartBeat
   DEP_FILE = CMakeFiles/HeartBeat.dir/src/js_utils.cpp.o.d
-  FLAGS = -std=gnu++14
-  INCLUDES = -I../include -I/home/nyiit/heatbeatproject/opencv/opencv-4.2.0/linux-build/install/include/opencv4/opencv -I/home/nyiit/heatbeatproject/opencv/opencv-4.2.0/linux-build/install/include/opencv4 -I/home/nyiit/heatbeatproject/openblas/OpenBLAS/mybuild/linux-build/install/include -I/home/nyiit/heatbeatproject/numcpp/NumCpp/install/lib -I/home/nyiit/heatbeatproject/numcpp/NumCpp/boost/boost_1_70_0/mybuild/linux-build/install/include
+  FLAGS = -O3 -DNDEBUG   -std=gnu++14
+  INCLUDES = -I../include -I/home/nyiit/heatbeatproject/opencv/opencv-3.4.7/linux-build/install/include/opencv -I/home/nyiit/heatbeatproject/opencv/opencv-3.4.7/linux-build/install/include -I/home/nyiit/heatbeatproject/openblas/OpenBLAS/mybuild/linux-build/install/include -I/home/nyiit/heatbeatproject/numcpp/NumCpp/install/lib -I/home/nyiit/heatbeatproject/numcpp/NumCpp/boost/boost_1_70_0/mybuild/linux-build/install/include
   OBJECT_DIR = CMakeFiles/HeartBeat.dir
   OBJECT_FILE_DIR = CMakeFiles/HeartBeat.dir/src
   TARGET_COMPILE_PDB = CMakeFiles/HeartBeat.dir/
   TARGET_PDB = HeartBeat.pdb
 build CMakeFiles/HeartBeat.dir/src/mtcnn.cpp.o: CXX_COMPILER__HeartBeat ../src/mtcnn.cpp || cmake_object_order_depends_target_HeartBeat
   DEP_FILE = CMakeFiles/HeartBeat.dir/src/mtcnn.cpp.o.d
-  FLAGS = -std=gnu++14
-  INCLUDES = -I../include -I/home/nyiit/heatbeatproject/opencv/opencv-4.2.0/linux-build/install/include/opencv4/opencv -I/home/nyiit/heatbeatproject/opencv/opencv-4.2.0/linux-build/install/include/opencv4 -I/home/nyiit/heatbeatproject/openblas/OpenBLAS/mybuild/linux-build/install/include -I/home/nyiit/heatbeatproject/numcpp/NumCpp/install/lib -I/home/nyiit/heatbeatproject/numcpp/NumCpp/boost/boost_1_70_0/mybuild/linux-build/install/include
+  FLAGS = -O3 -DNDEBUG   -std=gnu++14
+  INCLUDES = -I../include -I/home/nyiit/heatbeatproject/opencv/opencv-3.4.7/linux-build/install/include/opencv -I/home/nyiit/heatbeatproject/opencv/opencv-3.4.7/linux-build/install/include -I/home/nyiit/heatbeatproject/openblas/OpenBLAS/mybuild/linux-build/install/include -I/home/nyiit/heatbeatproject/numcpp/NumCpp/install/lib -I/home/nyiit/heatbeatproject/numcpp/NumCpp/boost/boost_1_70_0/mybuild/linux-build/install/include
   OBJECT_DIR = CMakeFiles/HeartBeat.dir
   OBJECT_FILE_DIR = CMakeFiles/HeartBeat.dir/src
   TARGET_COMPILE_PDB = CMakeFiles/HeartBeat.dir/
   TARGET_PDB = HeartBeat.pdb
 build CMakeFiles/HeartBeat.dir/src/network.cpp.o: CXX_COMPILER__HeartBeat ../src/network.cpp || cmake_object_order_depends_target_HeartBeat
   DEP_FILE = CMakeFiles/HeartBeat.dir/src/network.cpp.o.d
-  FLAGS = -std=gnu++14
-  INCLUDES = -I../include -I/home/nyiit/heatbeatproject/opencv/opencv-4.2.0/linux-build/install/include/opencv4/opencv -I/home/nyiit/heatbeatproject/opencv/opencv-4.2.0/linux-build/install/include/opencv4 -I/home/nyiit/heatbeatproject/openblas/OpenBLAS/mybuild/linux-build/install/include -I/home/nyiit/heatbeatproject/numcpp/NumCpp/install/lib -I/home/nyiit/heatbeatproject/numcpp/NumCpp/boost/boost_1_70_0/mybuild/linux-build/install/include
+  FLAGS = -O3 -DNDEBUG   -std=gnu++14
+  INCLUDES = -I../include -I/home/nyiit/heatbeatproject/opencv/opencv-3.4.7/linux-build/install/include/opencv -I/home/nyiit/heatbeatproject/opencv/opencv-3.4.7/linux-build/install/include -I/home/nyiit/heatbeatproject/openblas/OpenBLAS/mybuild/linux-build/install/include -I/home/nyiit/heatbeatproject/numcpp/NumCpp/install/lib -I/home/nyiit/heatbeatproject/numcpp/NumCpp/boost/boost_1_70_0/mybuild/linux-build/install/include
   OBJECT_DIR = CMakeFiles/HeartBeat.dir
   OBJECT_FILE_DIR = CMakeFiles/HeartBeat.dir/src
   TARGET_COMPILE_PDB = CMakeFiles/HeartBeat.dir/
   TARGET_PDB = HeartBeat.pdb
 build CMakeFiles/HeartBeat.dir/src/opencv.cpp.o: CXX_COMPILER__HeartBeat ../src/opencv.cpp || cmake_object_order_depends_target_HeartBeat
   DEP_FILE = CMakeFiles/HeartBeat.dir/src/opencv.cpp.o.d
-  FLAGS = -std=gnu++14
-  INCLUDES = -I../include -I/home/nyiit/heatbeatproject/opencv/opencv-4.2.0/linux-build/install/include/opencv4/opencv -I/home/nyiit/heatbeatproject/opencv/opencv-4.2.0/linux-build/install/include/opencv4 -I/home/nyiit/heatbeatproject/openblas/OpenBLAS/mybuild/linux-build/install/include -I/home/nyiit/heatbeatproject/numcpp/NumCpp/install/lib -I/home/nyiit/heatbeatproject/numcpp/NumCpp/boost/boost_1_70_0/mybuild/linux-build/install/include
+  FLAGS = -O3 -DNDEBUG   -std=gnu++14
+  INCLUDES = -I../include -I/home/nyiit/heatbeatproject/opencv/opencv-3.4.7/linux-build/install/include/opencv -I/home/nyiit/heatbeatproject/opencv/opencv-3.4.7/linux-build/install/include -I/home/nyiit/heatbeatproject/openblas/OpenBLAS/mybuild/linux-build/install/include -I/home/nyiit/heatbeatproject/numcpp/NumCpp/install/lib -I/home/nyiit/heatbeatproject/numcpp/NumCpp/boost/boost_1_70_0/mybuild/linux-build/install/include
   OBJECT_DIR = CMakeFiles/HeartBeat.dir
   OBJECT_FILE_DIR = CMakeFiles/HeartBeat.dir/src
   TARGET_COMPILE_PDB = CMakeFiles/HeartBeat.dir/
   TARGET_PDB = HeartBeat.pdb
 build CMakeFiles/HeartBeat.dir/src/pBox.cpp.o: CXX_COMPILER__HeartBeat ../src/pBox.cpp || cmake_object_order_depends_target_HeartBeat
   DEP_FILE = CMakeFiles/HeartBeat.dir/src/pBox.cpp.o.d
-  FLAGS = -std=gnu++14
-  INCLUDES = -I../include -I/home/nyiit/heatbeatproject/opencv/opencv-4.2.0/linux-build/install/include/opencv4/opencv -I/home/nyiit/heatbeatproject/opencv/opencv-4.2.0/linux-build/install/include/opencv4 -I/home/nyiit/heatbeatproject/openblas/OpenBLAS/mybuild/linux-build/install/include -I/home/nyiit/heatbeatproject/numcpp/NumCpp/install/lib -I/home/nyiit/heatbeatproject/numcpp/NumCpp/boost/boost_1_70_0/mybuild/linux-build/install/include
+  FLAGS = -O3 -DNDEBUG   -std=gnu++14
+  INCLUDES = -I../include -I/home/nyiit/heatbeatproject/opencv/opencv-3.4.7/linux-build/install/include/opencv -I/home/nyiit/heatbeatproject/opencv/opencv-3.4.7/linux-build/install/include -I/home/nyiit/heatbeatproject/openblas/OpenBLAS/mybuild/linux-build/install/include -I/home/nyiit/heatbeatproject/numcpp/NumCpp/install/lib -I/home/nyiit/heatbeatproject/numcpp/NumCpp/boost/boost_1_70_0/mybuild/linux-build/install/include
   OBJECT_DIR = CMakeFiles/HeartBeat.dir
   OBJECT_FILE_DIR = CMakeFiles/HeartBeat.dir/src
   TARGET_COMPILE_PDB = CMakeFiles/HeartBeat.dir/
@@ -137,7 +137,8 @@ build CMakeFiles/HeartBeat.dir/src/pBox.cpp.o: CXX_COMPILER__HeartBeat ../src/pB
 # Link the executable HeartBeat
 
 build HeartBeat: CXX_EXECUTABLE_LINKER__HeartBeat CMakeFiles/HeartBeat.dir/src/Baseline.cpp.o CMakeFiles/HeartBeat.dir/src/FaceDetect.cpp.o CMakeFiles/HeartBeat.dir/src/Heartbeat.cpp.o CMakeFiles/HeartBeat.dir/src/RPPG.cpp.o CMakeFiles/HeartBeat.dir/src/js_utils.cpp.o CMakeFiles/HeartBeat.dir/src/mtcnn.cpp.o CMakeFiles/HeartBeat.dir/src/network.cpp.o CMakeFiles/HeartBeat.dir/src/opencv.cpp.o CMakeFiles/HeartBeat.dir/src/pBox.cpp.o
-  LINK_LIBRARIES = -lz -lopencv_dnn -lopencv_gapi -lopencv_highgui -lopencv_ml -lopencv_objdetect -lopencv_photo -lopencv_stitching -lopencv_video -lopencv_calib3d -lopencv_features2d -lopencv_flann -lopencv_videoio -lopencv_imgcodecs -lopencv_imgproc -lopencv_core -lboost_system -lboost_filesystem -lopenblas
+  FLAGS = -O3 -DNDEBUG
+  LINK_LIBRARIES = -lz -lopencv_dnn -lopencv_highgui -lopencv_ml -lopencv_objdetect -lopencv_shape -lopencv_stitching -lopencv_superres -lopencv_videostab -lopencv_calib3d -lopencv_videoio -lopencv_imgcodecs -lopencv_features2d -lopencv_video -lopencv_photo -lopencv_imgproc -lopencv_flann -lopencv_core -lboost_system -lboost_filesystem -lopenblas
   OBJECT_DIR = CMakeFiles/HeartBeat.dir
   POST_BUILD = :
   PRE_LINK = :

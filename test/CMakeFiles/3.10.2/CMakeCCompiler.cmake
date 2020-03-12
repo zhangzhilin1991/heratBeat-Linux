@@ -69,5 +69,5 @@ endif()
 
 
 set(CMAKE_C_IMPLICIT_LINK_LIBRARIES "gcc;gcc_s;c;gcc;gcc_s")
-set(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "/home/nyiit/heatbeatproject/opencv/opencv-4.2.0/linux-build/install/lib;/home/nyiit/heatbeatproject/openblas/OpenBLAS/mybuild/linux-build/install/lib;/home/nyiit/heatbeatproject/numcpp/NumCpp/boost/boost_1_70_0/mybuild/linux-build/install/lib;/usr/lib/gcc/x86_64-linux-gnu/9;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib")
+set(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "/home/nyiit/heatbeatproject/opencv/opencv-3.4.7/linux-build/install/lib;/home/nyiit/heatbeatproject/openblas/OpenBLAS/mybuild/linux-build/install/lib;/home/nyiit/heatbeatproject/numcpp/NumCpp/boost/boost_1_70_0/mybuild/linux-build/install/lib;/usr/lib/gcc/x86_64-linux-gnu/9;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib")
 set(CMAKE_C_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")
