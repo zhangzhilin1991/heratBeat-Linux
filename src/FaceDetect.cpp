@@ -1,5 +1,9 @@
 #include"FaceDetect.h"
 
+//#include <android/log.h>
+//#define LOG_TAG "Heartbeat/FaceDetect"
+//#define LOGD(...) ((void)__android_log_print(ANDROID_LOG_DEBUG, LOG_TAG, __VA_ARGS__))
+
 void FaceDate_free(FaceData *data) {
 	free(data->keypoint);
 	free(data->location);
@@ -10,7 +14,7 @@ void FaceDetect(Mat frame, mtcnn *detector,struct FaceData *FaceInfo) {
 	
 	//check the size of init
 	if (frame.rows != detector->init_row || frame.cols != detector->init_col) {
-		cout << "Please check the size of input image" << endl;
+		//LOGD("FaceDetect() Please check the size of input image");
 		return;
 	}
 	detector->findFace(frame);

@@ -273,7 +273,7 @@ int main(int argc, char * argv[]) {
     // Load baseline if necessary
     Baseline baseline = Baseline();
     if (baseline_input != "") {
-        baseline.load(1, 0.000001, baseline_input);
+        //baseline.load(1, 0.000001, baseline_input);
     }
 
     cout << "START ALGORITHM" << endl;
@@ -321,6 +321,7 @@ int main(int argc, char * argv[]) {
 		} else {
 		    time = (cv::getTickCount()*1000.0)/cv::getTickFrequency();
 		}
+       cout << "time: " << time << endl;
 
 		// 主要处理部分
         if (i % downsample == 0) {
@@ -330,7 +331,7 @@ int main(int argc, char * argv[]) {
         }
 
         if (baseline_input != "") {
-            baseline.processFrame(frameRGB, time);
+            //baseline.processFrame(frameRGB, time);
         }
 
 		int after_time = (cv::getTickCount() * 1000.0) / cv::getTickFrequency() - start;

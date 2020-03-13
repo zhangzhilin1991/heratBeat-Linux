@@ -17,6 +17,10 @@
 #include <cmath>
 #include "js_utils.h"
 
+////#include <android/log.h>
+//#define LOG_TAG "Heartbeat/RPPG"
+//#define LOGD(...) ((void)__android_log_print(ANDROID_LOG_DEBUG, LOG_TAG, __VA_ARGS__))
+
 using namespace cv;
 using namespace dnn;
 using namespace std;
@@ -66,23 +70,26 @@ bool RPPG::load(const rPPGAlgorithm rPPGAlg, const faceDetAlgorithm faceDetAlg,
     }
 
     // Setting up logfilepath
-    ostringstream path_1;
-    path_1 << logPath << "_rppg=" << rPPGAlg << "_facedet=" << faceDetAlg << "_min=" << minSignalSize << "_max=" << maxSignalSize << "_ds=" << downsample;
-    this->logfilepath = path_1.str();
+    if (logMode) {
+		ostringstream path_1;
+		path_1 << logPath << "_rppg=" << rPPGAlg << "_facedet=" << faceDetAlg << "_min="
+			   << minSignalSize << "_max=" << maxSignalSize << "_ds=" << downsample;
+		this->logfilepath = path_1.str();
 
-    // Logging bpm according to sampling frequency
-    std::ostringstream path_2;
-    path_2 << logfilepath << "_meanbpm.csv";
-    logfile.open(path_2.str());
-	logfile << "frame,time,mean,\n";
-    logfile.flush();
+		// Logging bpm according to sampling frequency
+		std::ostringstream path_2;
+		path_2 << logfilepath << "_meanbpm.csv";
+		logfile.open(path_2.str());
+		logfile << "frame,time,mean,\n";
+		logfile.flush();
 
-    // Logging bpm detailed
-    std::ostringstream path_3;
-    path_3 << logfilepath << "_bpmAll.csv";
-    logfileDetailed.open(path_3.str());
-	logfileDetailed << "frame,time,bpm,fps,\n";
-    logfileDetailed.flush();
+		// Logging bpm detailed
+		std::ostringstream path_3;
+		path_3 << logfilepath << "_bpmAll.csv";
+		logfileDetailed.open(path_3.str());
+		logfileDetailed << "frame,time,bpm,fps,\n";
+		logfileDetailed.flush();
+	}
 
     return true;
 }
@@ -129,14 +136,14 @@ void RPPG::processFrame(Mat &frameRGB, Mat &frameGray, int time) {
 
     if (!faceValid) {
 
-        cout << "Not valid, finding a new face" << endl;
+		//LOGD("Not valid, finding a new face");
 
         lastScanTime = time;
         detectFace(frameRGB, frameGray);
 
     } else if ((time - lastScanTime) * timeBase >= 1/rescanFrequency) {
 
-        cout << "Valid, but rescanning face" << endl;
+		//LOGD("Valid, but rescanning face");
 
         lastScanTime = time;
         detectFace(frameRGB, frameGray);
@@ -144,7 +151,7 @@ void RPPG::processFrame(Mat &frameRGB, Mat &frameGray, int time) {
 
     } else {
 
-        cout << "Tracking face" << endl;
+		//LOGD("Tracking face");
 
         trackFace(frameGray);
     }
@@ -219,7 +226,7 @@ void RPPG::processFrame(Mat &frameRGB, Mat &frameGray, int time, mtcnn &mtcnn_fi
 	// 从输入图像中检测人脸
 	if (!faceValid) {
 
-		cout << "Not valid, finding a new face" << endl;
+		//LOGD("processFrame() Not valid, finding a new face");
 
 		lastScanTime = time;
 		//detectFace(frameRGB, frameGray);
@@ -229,7 +236,7 @@ void RPPG::processFrame(Mat &frameRGB, Mat &frameGray, int time, mtcnn &mtcnn_fi
 	// 有人脸，且当前时间距离上次采样的时间差超过1s，则重新采样(现在改为0.5s)
 	else if ((time - lastScanTime) * timeBase >= 0.5 / rescanFrequency) {
 
-		cout << "Valid, but rescanning face" << endl;
+		//LOGD("processFrame() Valid, but rescanning face");
 
 		lastScanTime = time;
 
@@ -239,11 +246,15 @@ void RPPG::processFrame(Mat &frameRGB, Mat &frameGray, int time, mtcnn &mtcnn_fi
 	}
 	else {
 		// 有人脸，当前时间与上次采样时间小于0.5s，则采用追踪
-		cout << "Tracking face" << endl;
+		//LOGD("processFrame() Tracking face");
 
 		trackFace(frameGray);
 	}
 
+	draw(frameRGB);
+
+	//return;
+        //faceValid = false;
 	// 检测心率
 	if (faceValid) {
 
@@ -260,9 +271,9 @@ void RPPG::processFrame(Mat &frameRGB, Mat &frameGray, int time, mtcnn &mtcnn_fi
 
 			meanBpm = mean(bpms)(0);
 		}
-        if (guiMode) {
+        //if (guiMode) {
             draw(frameRGB);
-        }
+        //}
 		if (logMode)
 		{
 			log();
@@ -284,7 +295,7 @@ void RPPG::countFrame()
 // 该方法没有调用，可忽视
 void RPPG::detectFace(Mat &frameRGB, Mat &frameGray) {
 
-    cout << "Scanning for faces..." << endl;
+	//LOGD("Scanning for faces...");
     vector<Rect> boxes = {};
 
     switch (faceDetAlg) {
@@ -320,7 +331,7 @@ void RPPG::detectFace(Mat &frameRGB, Mat &frameGray) {
 
     if (boxes.size() > 0) {
 
-        cout << "Found a face" << endl;
+		//LOGD("Found a face");
 
         setNearestBox(boxes);
         detectCorners(frameGray);
@@ -330,7 +341,7 @@ void RPPG::detectFace(Mat &frameRGB, Mat &frameGray) {
 
     } else {
 
-        cout << "Found no face" << endl;
+		//LOGD("Found no face");
         invalidateFace();
     }
 }
@@ -338,8 +349,8 @@ void RPPG::detectFace(Mat &frameRGB, Mat &frameGray) {
 // 检测人脸的主要代码， 运行case mtcnn_deep
 void RPPG::detectFace(Mat &frameRGB, Mat &frameGray, mtcnn &mtcnn_find) {
 
-	cout << "Scanning for faces..." << endl;
-	
+	//LOGD("detectFace() Scanning for faces...");
+
 	vector<Rect> boxes = {};
 
 	switch (faceDetAlg) {
@@ -380,13 +391,18 @@ void RPPG::detectFace(Mat &frameRGB, Mat &frameGray, mtcnn &mtcnn_find) {
 		FaceData FaceInfo;
 
 		FaceDetect(frameRGB, &mtcnn_find, &FaceInfo);
-		float* p_local = FaceInfo.location; 
+		float* p_local = FaceInfo.location;
+		if (p_local == NULL) {
+			//LOGD("detectFace() Found no face, p_local is null");
+            return;
+		}
 		int maxArg = 0;
 		int maxNum = 0;
 		vector<Rect> tmp_boxes;
 		vector<Point> tmp_landmarks;
 		if (new_face)
 		{
+			//LOGD("detectFace() Finding new face(%d)", FaceInfo.num);
 			for (int i = 0; i < FaceInfo.num; i++) {
 				int x1 = *p_local++;
 				int y1 = *p_local++;
@@ -414,6 +430,7 @@ void RPPG::detectFace(Mat &frameRGB, Mat &frameGray, mtcnn &mtcnn_find) {
 		}
 		else
 		{
+			//LOGD("detectFace() Finding face(%d)", FaceInfo.num);
 			maxNum = 9999;
 			for (int i = 0; i < FaceInfo.num; i++) {
 				int x1 = *p_local++;
@@ -439,7 +456,7 @@ void RPPG::detectFace(Mat &frameRGB, Mat &frameGray, mtcnn &mtcnn_find) {
 				}
 			}
 		}
-		
+
 		if (tmp_boxes.size() > 0)
 		{
 			boxes.push_back(tmp_boxes.at(maxArg));
@@ -455,6 +472,7 @@ void RPPG::detectFace(Mat &frameRGB, Mat &frameGray, mtcnn &mtcnn_find) {
 		}
 		else
 		{
+			//LOGD("detectFace()  Found no face, tmp_boxes.size() == 0");
 			new_face = true;
 		}
 		break;
@@ -463,7 +481,7 @@ void RPPG::detectFace(Mat &frameRGB, Mat &frameGray, mtcnn &mtcnn_find) {
 
 	if (boxes.size() > 0) {
 
-		cout << "Found a face" << endl;
+		//LOGD("detectFace()  Found a face");
 
 		setNearestBox(boxes);
 		detectCorners(frameGray);
@@ -474,12 +492,13 @@ void RPPG::detectFace(Mat &frameRGB, Mat &frameGray, mtcnn &mtcnn_find) {
 	}
 	else {
 
-		cout << "Found no face" << endl;
+		//LOGD("detectFace() Found no face, boxes.size == 0");
 		invalidateFace();
 	}
 }
 
 void RPPG::setNearestBox(vector<Rect> boxes) {
+	//LOGD("setNearestBox()");
     int index = 0;
     Point p = box.tl() - boxes.at(0).tl();
     int min = p.x * p.x + p.y * p.y;
@@ -495,7 +514,7 @@ void RPPG::setNearestBox(vector<Rect> boxes) {
 }
 
 void RPPG::detectCorners(Mat &frameGray) {
-
+	//LOGD("detectCorners()");
     // Define tracking region
     Mat trackingRegion = Mat::zeros(frameGray.rows, frameGray.cols, CV_8UC1);
     Point points[1][4];
@@ -538,7 +557,7 @@ void RPPG::trackFace(Mat &frameGray) {
 
 	// 人脸旋转超过幅度，角点为空，光流计算将会报错
 	if (corners.empty()) {
-		cout << "ERROR====" << endl;
+		//LOGD("trackFace() ERROR====");
 		return;
 	}
 
@@ -557,7 +576,7 @@ void RPPG::trackFace(Mat &frameGray) {
             corners_0v.push_back(corners_0[j]);
             corners_1v.push_back(corners_1[j]);
         } else {
-            cout << "Mis!" << std::endl;
+			//LOGD("trackFace() Mis!");
         }
     }
 
@@ -592,7 +611,7 @@ void RPPG::trackFace(Mat &frameGray) {
 
 	}
  else {
-	 cout << "Tracking failed! Not enough corners left." << endl;
+ 	//LOGD("trackFace() Tracking failed! Not enough corners left.");
 
 	 //
 	 /*invalidateFace();*/
@@ -632,7 +651,7 @@ void RPPG::updateMask(Mat &frameGray) {
 
 void RPPG::invalidateFace() {
 
-	cout << "Invalidation !" << endl;
+	//LOGD("invalidateFace() Invalidation!");
     s = Mat1d();
 
     t = Mat1d();
@@ -836,7 +855,10 @@ void RPPG::estimateHeartrate(Mat &frameRGB, Mat1b &input_mask, Mat1d &output_s, 
 
 		output_dim = output_s.rows;
 		fps = getFps(t, timeBase);
-		//cout << "size of t_array" << t_array.size() << endl;
+		cout << "fps: " << fps << endl;
+		cout << "size of t_array" << t_array.size() << endl;
+                cout << "linspace() Start: " << t_array.front() << "Stop: " << t_array.back() << endl;
+                cout << "time interval: " << t_array.back() - t_array.front() << " ms" << endl; 
 		nc::NdArray<double> even_times = nc::linspace<double>(t_array.front(), t_array.back(), L);
 
 		if (s.rows == s_array.numCols()) {
@@ -950,10 +972,23 @@ void RPPG::log() {
 void RPPG::draw(cv::Mat &frameRGB) {
 
     // 画人的额头框
+	std::stringstream ss0;
+	ss0.str("");
+	ss0 << "head: ";
+	ss0 << roi;
+	putText(frameRGB, ss0.str(), Point(30, 90), FONT_HERSHEY_PLAIN, 2, GREEN, 2);
 	rectangle(frameRGB, roi, RED);
 
     // 画人脸框
+	std::stringstream ss1;
+	ss1.str("");
+	ss1 << "face: ";
+	ss1 << roi;
+	putText(frameRGB, ss1.str(), Point(30, 120), FONT_HERSHEY_PLAIN, 2, GREEN, 2);
     rectangle(frameRGB, box, RED);
+
+
+	//return;
 	
     std::stringstream ss;
 

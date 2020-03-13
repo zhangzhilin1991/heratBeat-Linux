@@ -1,5 +1,9 @@
 #include "mtcnn.h"
 
+//#include <android/log.h>
+//#define LOG_TAG "Heartbeat/mtcnn"
+//#define LOGD(...) ((void)__android_log_print(ANDROID_LOG_DEBUG, LOG_TAG, __VA_ARGS__))
+
 Pnet::Pnet(){
     Pthreshold = 0.6;
     nms_threshold = 0.5;
@@ -125,6 +129,8 @@ void Pnet::run(Mat &image, float scale){
     generateBbox(this->score_, this->location_, scale);
 }
 void Pnet::generateBbox(const struct pBox *score, const struct pBox *location, mydataFmt scale){
+    //LOGD("generateBbox score= %f width=%d, height=%d", score->pdata , score->width, score->height);
+
     //for pooling 
     int stride = 2;
     int cellsize = 12;
@@ -255,7 +261,11 @@ void Rnet::RnetImage2MatrixInit(struct pBox *pbox){
     pbox->width = 24;
     
     pbox->pdata = (mydataFmt *)malloc(pbox->channel*pbox->height*pbox->width*sizeof(mydataFmt));
-    if(pbox->pdata==NULL)cout<<"the image2MatrixInit is failed!!"<<endl;
+    if(pbox->pdata==NULL)
+    {
+        cout<<"the image2MatrixInit is failed!!"<<endl;
+        return;
+    }
     memset(pbox->pdata, 0, pbox->channel*pbox->height*pbox->width*sizeof(mydataFmt));
 }
 void Rnet::run(Mat &image){
@@ -514,6 +524,9 @@ mtcnn::~mtcnn(){
 void mtcnn::findFace(Mat &image){
     struct orderScore order;
     int count = 0;
+
+    facenum = 0; //clear facenum
+
     for (size_t i = 0; i < scales_.size(); i++) {
         int changedH = (int)ceil(image.rows*scales_.at(i));
         int changedW = (int)ceil(image.cols*scales_.at(i));
@@ -534,7 +547,10 @@ void mtcnn::findFace(Mat &image){
         simpleFace_[i].boundingBox_.clear();
     }
     //the first stage's nms
-    if(count<1)return;
+    if(count<1) {
+        //LOGD("findFace() first stage failed");
+        return;
+    }
     nms(firstBbox_, firstOrderScore_, nms_threshold[0]);
     refineAndSquareBbox(firstBbox_, image.rows, image.cols);
 
@@ -563,7 +579,10 @@ void mtcnn::findFace(Mat &image){
             }
         }
     }
-    if(count<1)return;
+    if(count<1) {
+        //LOGD("findFace() second stage failed");
+        return;
+    }
     nms(secondBbox_, secondBboxScore_, nms_threshold[1]);
     refineAndSquareBbox(secondBbox_, image.rows, image.cols);
 
@@ -601,7 +620,10 @@ void mtcnn::findFace(Mat &image){
         }
     }
 
-    if(count<1)return;
+    if(count<1) {
+        //LOGD("findFace() third stage failed");
+        return;
+    }
     refineAndSquareBbox(this->thirdBbox_, image.rows, image.cols);
     nms(this->thirdBbox_, thirdBboxScore_, nms_threshold[2], "Min");
 	count = 0;

@@ -1,4 +1,11 @@
 #include "network.h"
+//#include "openblas_0_3_8_dev/include/cblas.h"
+#include "pBox.h"
+
+//#include <android/log.h>
+//#define LOG_TAG "Heartbeat/network"
+//#define LOGD(...) ((void)__android_log_print(ANDROID_LOG_DEBUG, LOG_TAG, __VA_ARGS__))
+
 void addbias(struct pBox *pbox, mydataFmt *pbias){
     if (pbox->pdata == NULL){
         cout << "Relu feature is NULL!!" << endl;
@@ -8,6 +15,7 @@ void addbias(struct pBox *pbox, mydataFmt *pbias){
         cout << "the  Relu bias is NULL!!" << endl;
         return;
     }
+    //LOGD("addbias brfore pdata= %f width=%d, height=%d", pbox->pdata , pbox->width, pbox->height);
     mydataFmt *op = pbox->pdata;
     mydataFmt *pb = pbias;
 
@@ -19,6 +27,7 @@ void addbias(struct pBox *pbox, mydataFmt *pbias){
         }
         pb++;
     }
+    //LOGD("addbias after pdata= %f width=%d, height=%d", pbox->pdata , pbox->width, pbox->height);
 }
 void image2MatrixInit(Mat &image, struct pBox *pbox){
     if ((image.data == NULL) || (image.type() != CV_8UC3)){
@@ -90,19 +99,25 @@ void feature2MatrixInit(const pBox *pbox, pBox *Matrix, const Weight *weight){
     Matrix->height = w_out*h_out;
     Matrix->channel = 1;
     Matrix->pdata = (mydataFmt *)malloc(Matrix->width*Matrix->height*sizeof(mydataFmt));
-    if(Matrix->pdata==NULL)cout<<"the feature2MatrixInit failed!!"<<endl;
+    if(Matrix->pdata==NULL) {
+        cout<<"the feature2MatrixInit failed!!"<<endl;
+        return;
+    }
     memset(Matrix->pdata, 0, Matrix->width*Matrix->height*sizeof(mydataFmt));
 }
 void feature2Matrix(const pBox *pbox, pBox *Matrix, const Weight *weight){
     if (pbox->pdata == NULL){
-        cout << "the feature2Matrix pbox is NULL!!" << endl;
+        //LOGD("feature2Matrix() pbox is NULL!!");
         return;
     }
     int kernelSize = weight->kernelSize;
     int stride = weight->stride;
+    //LOGD("feature2Matrix() weight=%f, kernelSize=%d, stride=%d", weight, kernelSize, stride);
+    //LOGD("feature2Matrix() pbox=%f width=%d, height=%d", *(pbox->pdata),pbox->width, pbox->height);
     int w_out = (pbox->width - kernelSize) / stride + 1;//Õâ¸ö¹«Ê½Ò»¶¨Òª¸ãÇå³þ£¬¿ÉÒÔ×Ô¼ºÈ¥»­¸ö¾ØÕó¿´¿´
     int h_out = (pbox->height - kernelSize) / stride + 1;
-    
+    //LOGD("feature2Matrix() w_out=%d, h_out=%d", w_out, h_out);
+
     mydataFmt *p = Matrix->pdata;
     mydataFmt *pIn;
     mydataFmt * ptemp;
@@ -128,18 +143,23 @@ void convolutionInit(const Weight *weight, const pBox *pbox, pBox *outpBox, cons
     outpBox->width = (pbox->width - weight->kernelSize) / weight->stride + 1;
     outpBox->height = (pbox->height - weight->kernelSize) / weight->stride + 1;
     outpBox->pdata = (mydataFmt *)malloc(weight->selfChannel*matrix->height*sizeof(mydataFmt));
-    if(outpBox->pdata==NULL)cout<<"the convolutionInit is failed!!"<<endl;
+    if(outpBox->pdata==NULL)
+    {
+        cout << "the convolutionInit is failed!!" << endl;
+        return;
+    }
     memset(outpBox->pdata , 0, weight->selfChannel*matrix->height*sizeof(mydataFmt));
 }
 void convolution(const Weight *weight, const pBox *pbox, pBox *outpBox, const struct pBox *matrix){
     if (pbox->pdata == NULL){
-        cout << "the feature is NULL!!" << endl;
+        //LOGD("the feature is NULL!!");
         return;
     }
     if (weight->pdata == NULL){
-        cout << "the weight is NULL!!" << endl;
+        //LOGD("the weight is NULL!!");
         return;
     }
+    //LOGD("convolution() pbox=%f, weight=%f, matrix=%f", *(pbox->pdata), *(weight->pdata), *(matrix->pdata));
 
     if(weight->pad==0){
     	//C←αAB + βC
@@ -160,7 +180,11 @@ void maxPoolingInit(const pBox *pbox, pBox *Matrix, int kernelSize, int stride){
     Matrix->height = ceil((float)(pbox->height - kernelSize) / stride + 1);
     Matrix->channel = pbox->channel;
     Matrix->pdata = (mydataFmt *)malloc(Matrix->channel*Matrix->width*Matrix->height*sizeof(mydataFmt));
-    if(Matrix->pdata==NULL)cout<<"the maxPoolingInit is failed!!"<<endl;
+    if(Matrix->pdata==NULL)
+    {
+        cout<<"the maxPoolingInit is failed!!"<<endl;
+        return;
+    }
     memset(Matrix->pdata, 0, Matrix->channel*Matrix->width*Matrix->height*sizeof(mydataFmt));
 }
 
@@ -271,20 +295,21 @@ void fullconnectInit(const Weight *weight, pBox *outpBox){
     memset(outpBox->pdata, 0, weight->selfChannel*sizeof(mydataFmt));
 }
 void fullconnect(const Weight *weight, const pBox *pbox, pBox *outpBox){
+    //LOGD("fullconnect()");
     if (pbox->pdata == NULL){
-        cout << "the fc feature is NULL!!" << endl;
+        //LOGD("fullconnect() the fc feature is NULL!!");
         return;
     }
     if (weight->pdata == NULL){
-        cout << "the fc weight is NULL!!" << endl;
+        //LOGD("fullconnect() the fc weight is NULL!!");
         return;
     }
+    //LOGD("fullconnect() pbox=%f, weight=%f", pbox->pdata, weight->pdata);
     memset(outpBox->pdata, 0, weight->selfChannel*sizeof(mydataFmt));
     //Y←αAX + βY    β must be 0(zero)
     //               row         no trans         A's row               A'col
     cblas_sgemv(CblasRowMajor, CblasNoTrans, weight->selfChannel, weight->lastChannel, 1, weight->pdata, weight->lastChannel, pbox->pdata, 1, 0, outpBox->pdata, 1);
 }
-
 
 
 void readData(string filename, long dataNumber[], mydataFmt *pTeam[]){
@@ -352,9 +377,10 @@ void initpRelu(struct pRelu *prelu, int width){
 }
 void softmax(const struct pBox *pbox){
     if(pbox->pdata==NULL){
-        cout<<"the softmax's pdata is NULL , Please check !"<<endl;
+        //LOGD("softmax() the softmax's pdata is NULL , Please check !");
         return;
     }
+    //LOGD("softmax brfore pdata= %f width=%d, height=%d", pbox->pdata , pbox->width, pbox->height);
     mydataFmt *p2D = pbox->pdata;
     mydataFmt *p3D = NULL;
     long mapSize = pbox->width*pbox->height;
@@ -374,6 +400,8 @@ void softmax(const struct pBox *pbox){
             p2D++;
         }
     }
+    //LOGD("softmax after pdata= %f width=%d, height=%d", pbox->pdata , pbox->width, pbox->height);
+        //cout << "softmax after pdata=" << pbox->pdata
 }
 
 bool cmpScore(struct orderScore lsh, struct orderScore rsh){
@@ -384,6 +412,8 @@ bool cmpScore(struct orderScore lsh, struct orderScore rsh){
 }
 void nms(vector<struct Bbox> &boundingBox_, vector<struct orderScore> &bboxScore_, const float overlap_threshold, string modelname){
     if(boundingBox_.empty()){
+        //LOGD("nms() boundingBox_ is empty!!");
+        //cout << "nms() boundingBox_ is empty!!";
         return;
     }
     std::vector<int> heros;
@@ -437,7 +467,8 @@ void nms(vector<struct Bbox> &boundingBox_, vector<struct orderScore> &bboxScore
 }
 void refineAndSquareBbox(vector<struct Bbox> &vecBbox, const int &height, const int &width){
     if(vecBbox.empty()){
-        cout<<"Bbox is empty!!"<<endl;
+        //LOGD("refineAndSquareBbox() vecBbox is empty!!");
+        cout << "refineAndSquareBbox() vecBbox is empty!!";
         return;
     }
     float bbw=0, bbh=0, maxSide=0;

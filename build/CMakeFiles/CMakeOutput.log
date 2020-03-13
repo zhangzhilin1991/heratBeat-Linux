@@ -28,17 +28,17 @@ The CXX compiler identification is GNU, found in "/home/nyiit/heatbeatproject/he
 Determining if the C compiler works passed with the following output:
 Change Dir: /home/nyiit/heatbeatproject/heartbeat-linux/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/home/nyiit/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_1a1e2"
-[1/2] Building C object CMakeFiles/cmTC_1a1e2.dir/testCCompiler.c.o
-[2/2] Linking C executable cmTC_1a1e2
+Run Build Command:"/home/nyiit/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_70007"
+[1/2] Building C object CMakeFiles/cmTC_70007.dir/testCCompiler.c.o
+[2/2] Linking C executable cmTC_70007
 
 
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: /home/nyiit/heatbeatproject/heartbeat-linux/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/home/nyiit/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_4fa69"
-[1/2] Building C object CMakeFiles/cmTC_4fa69.dir/CMakeCCompilerABI.c.o
-[2/2] Linking C executable cmTC_4fa69
+Run Build Command:"/home/nyiit/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_d4cf2"
+[1/2] Building C object CMakeFiles/cmTC_d4cf2.dir/CMakeCCompilerABI.c.o
+[2/2] Linking C executable cmTC_d4cf2
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper
@@ -50,18 +50,18 @@ Thread model: posix
 gcc version 9.2.1 20191008 (Ubuntu 9.2.1-9ubuntu2) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/home/nyiit/heatbeatproject/opencv/opencv-4.2.0/linux-build/install/lib/../lib/:/home/nyiit/heatbeatproject/openblas/OpenBLAS/mybuild/linux-build/install/lib/../lib/:/home/nyiit/heatbeatproject/numcpp/NumCpp/boost/boost_1_70_0/mybuild/linux-build/install/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/home/nyiit/heatbeatproject/opencv/opencv-4.2.0/linux-build/install/lib/:/home/nyiit/heatbeatproject/openblas/OpenBLAS/mybuild/linux-build/install/lib/:/home/nyiit/heatbeatproject/numcpp/NumCpp/boost/boost_1_70_0/mybuild/linux-build/install/lib/:./:/usr/lib/gcc/x86_64-linux-gnu/9/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_4fa69' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/9/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/9/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper -plugin-opt=-fresolution=/tmp/cc4vVETx.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_4fa69 /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o -L/home/nyiit/heatbeatproject/opencv/opencv-4.2.0/linux-build/install/lib/../lib -L/home/nyiit/heatbeatproject/openblas/OpenBLAS/mybuild/linux-build/install/lib/../lib -L/home/nyiit/heatbeatproject/numcpp/NumCpp/boost/boost_1_70_0/mybuild/linux-build/install/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/9 -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/home/nyiit/heatbeatproject/opencv/opencv-4.2.0/linux-build/install/lib -L/home/nyiit/heatbeatproject/openblas/OpenBLAS/mybuild/linux-build/install/lib -L/home/nyiit/heatbeatproject/numcpp/NumCpp/boost/boost_1_70_0/mybuild/linux-build/install/lib -L. -L/usr/lib/gcc/x86_64-linux-gnu/9/../../.. CMakeFiles/cmTC_4fa69.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/9/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_4fa69' '-mtune=generic' '-march=x86-64'
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_d4cf2' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/9/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/9/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper -plugin-opt=-fresolution=/tmp/ccA6s35v.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_d4cf2 /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o -L/home/nyiit/heatbeatproject/opencv/opencv-4.2.0/linux-build/install/lib/../lib -L/home/nyiit/heatbeatproject/openblas/OpenBLAS/mybuild/linux-build/install/lib/../lib -L/home/nyiit/heatbeatproject/numcpp/NumCpp/boost/boost_1_70_0/mybuild/linux-build/install/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/9 -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/home/nyiit/heatbeatproject/opencv/opencv-4.2.0/linux-build/install/lib -L/home/nyiit/heatbeatproject/openblas/OpenBLAS/mybuild/linux-build/install/lib -L/home/nyiit/heatbeatproject/numcpp/NumCpp/boost/boost_1_70_0/mybuild/linux-build/install/lib -L. -L/usr/lib/gcc/x86_64-linux-gnu/9/../../.. CMakeFiles/cmTC_d4cf2.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/9/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_d4cf2' '-mtune=generic' '-march=x86-64'
 
 
 Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/nyiit/heatbeatproject/heartbeat-linux/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/home/nyiit/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_4fa69"]
-  ignore line: [[1/2] Building C object CMakeFiles/cmTC_4fa69.dir/CMakeCCompilerABI.c.o]
-  ignore line: [[2/2] Linking C executable cmTC_4fa69]
+  ignore line: [Run Build Command:"/home/nyiit/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_d4cf2"]
+  ignore line: [[1/2] Building C object CMakeFiles/cmTC_d4cf2.dir/CMakeCCompilerABI.c.o]
+  ignore line: [[2/2] Linking C executable cmTC_d4cf2]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper]
@@ -73,13 +73,13 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 9.2.1 20191008 (Ubuntu 9.2.1-9ubuntu2) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/home/nyiit/heatbeatproject/opencv/opencv-4.2.0/linux-build/install/lib/../lib/:/home/nyiit/heatbeatproject/openblas/OpenBLAS/mybuild/linux-build/install/lib/../lib/:/home/nyiit/heatbeatproject/numcpp/NumCpp/boost/boost_1_70_0/mybuild/linux-build/install/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/home/nyiit/heatbeatproject/opencv/opencv-4.2.0/linux-build/install/lib/:/home/nyiit/heatbeatproject/openblas/OpenBLAS/mybuild/linux-build/install/lib/:/home/nyiit/heatbeatproject/numcpp/NumCpp/boost/boost_1_70_0/mybuild/linux-build/install/lib/:./:/usr/lib/gcc/x86_64-linux-gnu/9/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_4fa69' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/9/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/9/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper -plugin-opt=-fresolution=/tmp/cc4vVETx.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_4fa69 /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o -L/home/nyiit/heatbeatproject/opencv/opencv-4.2.0/linux-build/install/lib/../lib -L/home/nyiit/heatbeatproject/openblas/OpenBLAS/mybuild/linux-build/install/lib/../lib -L/home/nyiit/heatbeatproject/numcpp/NumCpp/boost/boost_1_70_0/mybuild/linux-build/install/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/9 -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/home/nyiit/heatbeatproject/opencv/opencv-4.2.0/linux-build/install/lib -L/home/nyiit/heatbeatproject/openblas/OpenBLAS/mybuild/linux-build/install/lib -L/home/nyiit/heatbeatproject/numcpp/NumCpp/boost/boost_1_70_0/mybuild/linux-build/install/lib -L. -L/usr/lib/gcc/x86_64-linux-gnu/9/../../.. CMakeFiles/cmTC_4fa69.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/9/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_d4cf2' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/9/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/9/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper -plugin-opt=-fresolution=/tmp/ccA6s35v.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_d4cf2 /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o -L/home/nyiit/heatbeatproject/opencv/opencv-4.2.0/linux-build/install/lib/../lib -L/home/nyiit/heatbeatproject/openblas/OpenBLAS/mybuild/linux-build/install/lib/../lib -L/home/nyiit/heatbeatproject/numcpp/NumCpp/boost/boost_1_70_0/mybuild/linux-build/install/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/9 -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/home/nyiit/heatbeatproject/opencv/opencv-4.2.0/linux-build/install/lib -L/home/nyiit/heatbeatproject/openblas/OpenBLAS/mybuild/linux-build/install/lib -L/home/nyiit/heatbeatproject/numcpp/NumCpp/boost/boost_1_70_0/mybuild/linux-build/install/lib -L. -L/usr/lib/gcc/x86_64-linux-gnu/9/../../.. CMakeFiles/cmTC_d4cf2.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/9/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/9/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/9/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/cc4vVETx.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccA6s35v.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -98,7 +98,7 @@ Parsed C implicit link information from above output:
     arg [-znow] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_4fa69] ==> ignore
+    arg [cmTC_d4cf2] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o] ==> ignore
@@ -117,7 +117,7 @@ Parsed C implicit link information from above output:
     arg [-L/home/nyiit/heatbeatproject/numcpp/NumCpp/boost/boost_1_70_0/mybuild/linux-build/install/lib] ==> dir [/home/nyiit/heatbeatproject/numcpp/NumCpp/boost/boost_1_70_0/mybuild/linux-build/install/lib]
     arg [-L.] ==> ignore
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/9/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/9/../../..]
-    arg [CMakeFiles/cmTC_4fa69.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_d4cf2.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--push-state] ==> ignore
     arg [--as-needed] ==> ignore
@@ -155,9 +155,9 @@ Parsed C implicit link information from above output:
 Detecting C [-std=c11] compiler features compiled with the following output:
 Change Dir: /home/nyiit/heatbeatproject/heartbeat-linux/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/home/nyiit/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_a81fd"
-[1/2] Building C object CMakeFiles/cmTC_a81fd.dir/feature_tests.c.o
-[2/2] Linking C executable cmTC_a81fd
+Run Build Command:"/home/nyiit/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_594bc"
+[1/2] Building C object CMakeFiles/cmTC_594bc.dir/feature_tests.c.o
+[2/2] Linking C executable cmTC_594bc
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -169,9 +169,9 @@ Run Build Command:"/home/nyiit/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC
 Detecting C [-std=c99] compiler features compiled with the following output:
 Change Dir: /home/nyiit/heatbeatproject/heartbeat-linux/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/home/nyiit/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_652b9"
-[1/2] Building C object CMakeFiles/cmTC_652b9.dir/feature_tests.c.o
-[2/2] Linking C executable cmTC_652b9
+Run Build Command:"/home/nyiit/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_5c57a"
+[1/2] Building C object CMakeFiles/cmTC_5c57a.dir/feature_tests.c.o
+[2/2] Linking C executable cmTC_5c57a
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -183,9 +183,9 @@ Run Build Command:"/home/nyiit/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC
 Detecting C [-std=c90] compiler features compiled with the following output:
 Change Dir: /home/nyiit/heatbeatproject/heartbeat-linux/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/home/nyiit/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_df069"
-[1/2] Building C object CMakeFiles/cmTC_df069.dir/feature_tests.c.o
-[2/2] Linking C executable cmTC_df069
+Run Build Command:"/home/nyiit/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_5aadd"
+[1/2] Building C object CMakeFiles/cmTC_5aadd.dir/feature_tests.c.o
+[2/2] Linking C executable cmTC_5aadd
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -195,17 +195,17 @@ Run Build Command:"/home/nyiit/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC
 Determining if the CXX compiler works passed with the following output:
 Change Dir: /home/nyiit/heatbeatproject/heartbeat-linux/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/home/nyiit/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_5d8f8"
-[1/2] Building CXX object CMakeFiles/cmTC_5d8f8.dir/testCXXCompiler.cxx.o
-[2/2] Linking CXX executable cmTC_5d8f8
+Run Build Command:"/home/nyiit/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_97ed2"
+[1/2] Building CXX object CMakeFiles/cmTC_97ed2.dir/testCXXCompiler.cxx.o
+[2/2] Linking CXX executable cmTC_97ed2
 
 
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: /home/nyiit/heatbeatproject/heartbeat-linux/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/home/nyiit/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_1d3ef"
-[1/2] Building CXX object CMakeFiles/cmTC_1d3ef.dir/CMakeCXXCompilerABI.cpp.o
-[2/2] Linking CXX executable cmTC_1d3ef
+Run Build Command:"/home/nyiit/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_c1b46"
+[1/2] Building CXX object CMakeFiles/cmTC_c1b46.dir/CMakeCXXCompilerABI.cpp.o
+[2/2] Linking CXX executable cmTC_c1b46
 Using built-in specs.
 COLLECT_GCC=/usr/bin/c++
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper
@@ -217,18 +217,18 @@ Thread model: posix
 gcc version 9.2.1 20191008 (Ubuntu 9.2.1-9ubuntu2) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/home/nyiit/heatbeatproject/opencv/opencv-4.2.0/linux-build/install/lib/../lib/:/home/nyiit/heatbeatproject/openblas/OpenBLAS/mybuild/linux-build/install/lib/../lib/:/home/nyiit/heatbeatproject/numcpp/NumCpp/boost/boost_1_70_0/mybuild/linux-build/install/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/home/nyiit/heatbeatproject/opencv/opencv-4.2.0/linux-build/install/lib/:/home/nyiit/heatbeatproject/openblas/OpenBLAS/mybuild/linux-build/install/lib/:/home/nyiit/heatbeatproject/numcpp/NumCpp/boost/boost_1_70_0/mybuild/linux-build/install/lib/:./:/usr/lib/gcc/x86_64-linux-gnu/9/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_1d3ef' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/9/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/9/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper -plugin-opt=-fresolution=/tmp/cc6XS3H7.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_1d3ef /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o -L/home/nyiit/heatbeatproject/opencv/opencv-4.2.0/linux-build/install/lib/../lib -L/home/nyiit/heatbeatproject/openblas/OpenBLAS/mybuild/linux-build/install/lib/../lib -L/home/nyiit/heatbeatproject/numcpp/NumCpp/boost/boost_1_70_0/mybuild/linux-build/install/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/9 -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/home/nyiit/heatbeatproject/opencv/opencv-4.2.0/linux-build/install/lib -L/home/nyiit/heatbeatproject/openblas/OpenBLAS/mybuild/linux-build/install/lib -L/home/nyiit/heatbeatproject/numcpp/NumCpp/boost/boost_1_70_0/mybuild/linux-build/install/lib -L. -L/usr/lib/gcc/x86_64-linux-gnu/9/../../.. CMakeFiles/cmTC_1d3ef.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/9/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_1d3ef' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_c1b46' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/9/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/9/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper -plugin-opt=-fresolution=/tmp/ccGJ4xbl.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_c1b46 /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o -L/home/nyiit/heatbeatproject/opencv/opencv-4.2.0/linux-build/install/lib/../lib -L/home/nyiit/heatbeatproject/openblas/OpenBLAS/mybuild/linux-build/install/lib/../lib -L/home/nyiit/heatbeatproject/numcpp/NumCpp/boost/boost_1_70_0/mybuild/linux-build/install/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/9 -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/home/nyiit/heatbeatproject/opencv/opencv-4.2.0/linux-build/install/lib -L/home/nyiit/heatbeatproject/openblas/OpenBLAS/mybuild/linux-build/install/lib -L/home/nyiit/heatbeatproject/numcpp/NumCpp/boost/boost_1_70_0/mybuild/linux-build/install/lib -L. -L/usr/lib/gcc/x86_64-linux-gnu/9/../../.. CMakeFiles/cmTC_c1b46.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/9/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_c1b46' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
 
 
 Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/nyiit/heatbeatproject/heartbeat-linux/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/home/nyiit/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_1d3ef"]
-  ignore line: [[1/2] Building CXX object CMakeFiles/cmTC_1d3ef.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [[2/2] Linking CXX executable cmTC_1d3ef]
+  ignore line: [Run Build Command:"/home/nyiit/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_c1b46"]
+  ignore line: [[1/2] Building CXX object CMakeFiles/cmTC_c1b46.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [[2/2] Linking CXX executable cmTC_c1b46]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/c++]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper]
@@ -240,13 +240,13 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 9.2.1 20191008 (Ubuntu 9.2.1-9ubuntu2) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/home/nyiit/heatbeatproject/opencv/opencv-4.2.0/linux-build/install/lib/../lib/:/home/nyiit/heatbeatproject/openblas/OpenBLAS/mybuild/linux-build/install/lib/../lib/:/home/nyiit/heatbeatproject/numcpp/NumCpp/boost/boost_1_70_0/mybuild/linux-build/install/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/home/nyiit/heatbeatproject/opencv/opencv-4.2.0/linux-build/install/lib/:/home/nyiit/heatbeatproject/openblas/OpenBLAS/mybuild/linux-build/install/lib/:/home/nyiit/heatbeatproject/numcpp/NumCpp/boost/boost_1_70_0/mybuild/linux-build/install/lib/:./:/usr/lib/gcc/x86_64-linux-gnu/9/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_1d3ef' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/9/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/9/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper -plugin-opt=-fresolution=/tmp/cc6XS3H7.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_1d3ef /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o -L/home/nyiit/heatbeatproject/opencv/opencv-4.2.0/linux-build/install/lib/../lib -L/home/nyiit/heatbeatproject/openblas/OpenBLAS/mybuild/linux-build/install/lib/../lib -L/home/nyiit/heatbeatproject/numcpp/NumCpp/boost/boost_1_70_0/mybuild/linux-build/install/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/9 -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/home/nyiit/heatbeatproject/opencv/opencv-4.2.0/linux-build/install/lib -L/home/nyiit/heatbeatproject/openblas/OpenBLAS/mybuild/linux-build/install/lib -L/home/nyiit/heatbeatproject/numcpp/NumCpp/boost/boost_1_70_0/mybuild/linux-build/install/lib -L. -L/usr/lib/gcc/x86_64-linux-gnu/9/../../.. CMakeFiles/cmTC_1d3ef.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/9/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_c1b46' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/9/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/9/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper -plugin-opt=-fresolution=/tmp/ccGJ4xbl.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_c1b46 /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o -L/home/nyiit/heatbeatproject/opencv/opencv-4.2.0/linux-build/install/lib/../lib -L/home/nyiit/heatbeatproject/openblas/OpenBLAS/mybuild/linux-build/install/lib/../lib -L/home/nyiit/heatbeatproject/numcpp/NumCpp/boost/boost_1_70_0/mybuild/linux-build/install/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/9 -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/home/nyiit/heatbeatproject/opencv/opencv-4.2.0/linux-build/install/lib -L/home/nyiit/heatbeatproject/openblas/OpenBLAS/mybuild/linux-build/install/lib -L/home/nyiit/heatbeatproject/numcpp/NumCpp/boost/boost_1_70_0/mybuild/linux-build/install/lib -L. -L/usr/lib/gcc/x86_64-linux-gnu/9/../../.. CMakeFiles/cmTC_c1b46.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/9/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/9/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/9/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/cc6XS3H7.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccGJ4xbl.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -265,7 +265,7 @@ Parsed CXX implicit link information from above output:
     arg [-znow] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_1d3ef] ==> ignore
+    arg [cmTC_c1b46] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o] ==> ignore
@@ -284,7 +284,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/home/nyiit/heatbeatproject/numcpp/NumCpp/boost/boost_1_70_0/mybuild/linux-build/install/lib] ==> dir [/home/nyiit/heatbeatproject/numcpp/NumCpp/boost/boost_1_70_0/mybuild/linux-build/install/lib]
     arg [-L.] ==> ignore
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/9/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/9/../../..]
-    arg [CMakeFiles/cmTC_1d3ef.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_c1b46.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -318,9 +318,9 @@ Parsed CXX implicit link information from above output:
 Detecting CXX [-std=c++1z] compiler features compiled with the following output:
 Change Dir: /home/nyiit/heatbeatproject/heartbeat-linux/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/home/nyiit/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_8ceb9"
-[1/2] Building CXX object CMakeFiles/cmTC_8ceb9.dir/feature_tests.cxx.o
-[2/2] Linking CXX executable cmTC_8ceb9
+Run Build Command:"/home/nyiit/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_e221c"
+[1/2] Building CXX object CMakeFiles/cmTC_e221c.dir/feature_tests.cxx.o
+[2/2] Linking CXX executable cmTC_e221c
 
 
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
@@ -385,9 +385,9 @@ Run Build Command:"/home/nyiit/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
 Change Dir: /home/nyiit/heatbeatproject/heartbeat-linux/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/home/nyiit/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_8c116"
-[1/2] Building CXX object CMakeFiles/cmTC_8c116.dir/feature_tests.cxx.o
-[2/2] Linking CXX executable cmTC_8c116
+Run Build Command:"/home/nyiit/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_850a2"
+[1/2] Building CXX object CMakeFiles/cmTC_850a2.dir/feature_tests.cxx.o
+[2/2] Linking CXX executable cmTC_850a2
 
 
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
@@ -452,9 +452,9 @@ Run Build Command:"/home/nyiit/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
 Change Dir: /home/nyiit/heatbeatproject/heartbeat-linux/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/home/nyiit/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_a325c"
-[1/2] Building CXX object CMakeFiles/cmTC_a325c.dir/feature_tests.cxx.o
-[2/2] Linking CXX executable cmTC_a325c
+Run Build Command:"/home/nyiit/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_ab220"
+[1/2] Building CXX object CMakeFiles/cmTC_ab220.dir/feature_tests.cxx.o
+[2/2] Linking CXX executable cmTC_ab220
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
@@ -519,9 +519,9 @@ Run Build Command:"/home/nyiit/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
 Change Dir: /home/nyiit/heatbeatproject/heartbeat-linux/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/home/nyiit/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_dd216"
-[1/2] Building CXX object CMakeFiles/cmTC_dd216.dir/feature_tests.cxx.o
-[2/2] Linking CXX executable cmTC_dd216
+Run Build Command:"/home/nyiit/Android/Sdk/cmake/3.10.2.4988404/bin/ninja" "cmTC_e1c19"
+[1/2] Building CXX object CMakeFiles/cmTC_e1c19.dir/feature_tests.cxx.o
+[2/2] Linking CXX executable cmTC_e1c19
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
